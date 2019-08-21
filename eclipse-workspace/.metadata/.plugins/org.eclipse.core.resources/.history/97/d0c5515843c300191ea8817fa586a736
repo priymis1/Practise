@@ -1,0 +1,11 @@
+package comm.example;
+
+public class StackConsumer implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

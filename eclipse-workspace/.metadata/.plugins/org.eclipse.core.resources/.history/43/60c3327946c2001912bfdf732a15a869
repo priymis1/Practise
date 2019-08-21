@@ -1,0 +1,27 @@
+package comm.example;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Set;
+
+public class ListDemo {
+	public static void main(String[] args) {
+		
+		Collection<String> list = new ArrayList<String>();
+		list.add("John");
+		list.add("John");
+		Set<String> set = new HashSet<String>();
+		list.addAll(set);
+		System.out.println(list);
+		list.removeAll(set);
+		System.out.println(list);
+		System.out.println(list.isEmpty());
+		list.clear();
+		System.out.println(list);
+		for(String str:list)
+		{
+			
+		}
+		Iterator<String> str
+	}
+}

@@ -1,0 +1,18 @@
+package comm.example.factory;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class MyConnectionfactory {
+	
+	private static Connection connection;
+	private static MyConnectionFactory factory=null;
+	
+	private MyConnectionfactory() throws SQLException
+	{
+		
+	}
+	
+	
+
+}

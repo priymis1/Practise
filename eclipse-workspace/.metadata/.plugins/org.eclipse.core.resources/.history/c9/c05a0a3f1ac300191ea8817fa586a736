@@ -1,0 +1,27 @@
+package comm.example.dao;
+
+import java.util.List;
+
+import comm.example.model.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public void createEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getEmployeesById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

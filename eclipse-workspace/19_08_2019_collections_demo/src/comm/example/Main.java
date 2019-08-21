@@ -1,0 +1,16 @@
+package comm.example;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Set<Student> set = new TreeSet<Student>();
+		
+
+	}
+
+}
