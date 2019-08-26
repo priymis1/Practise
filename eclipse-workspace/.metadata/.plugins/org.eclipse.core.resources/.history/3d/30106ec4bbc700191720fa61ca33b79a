@@ -1,0 +1,48 @@
+package comm.example;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestComputeClass {
+	
+	int x;
+	int y;
+
+	@Override
+	public void setUp() throws Exception {
+		super.setUp();
+		System.out.println("initialize method");
+		x=5;
+		y=7;
+	}
+
+	@Override
+	public void tearDown() throws Exception {
+		super.tearDown
+		sys
+	}
+
+	@Test
+	public void testCalculatorIntInt() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddMethod() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSubMethod() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testFirstGreaterThanSecond() {
+		fail("Not yet implemented");
+	}
+
+}

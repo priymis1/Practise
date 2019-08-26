@@ -1,0 +1,9 @@
+package comm.handsOn;
+
+
+	
+	public class Ccc1 extends Ccc {
+   	 
+		 public void start() { System.out.println("TestB"); }
+
+	}

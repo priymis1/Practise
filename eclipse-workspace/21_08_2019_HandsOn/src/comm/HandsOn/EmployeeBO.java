@@ -9,7 +9,7 @@ public class EmployeeBO {
 	{
 	for (Employee e:list)
 	{
-		System.out.printf();
+		System.out.printf("EmpId :%d\t EmpName :%s\t EmpDepartment :%s\t EmpDateOfJoining :%s\t EmpAge :%d\t EmpSalary :%d\n",e.getId(),e.getName(),e.getDepartment(),e.getDateOfJoining(),e.getAge(),e.getSalary());
 	}
 	}
 

@@ -1,0 +1,57 @@
+package comm.example;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestComputeClass {
+	
+	
+
+	public TestComputeClass() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public TestComputeClass(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	@Before
+	public void setUp() throws Exception {
+		
+		super.setUp();
+		System.out.println("Initialize method");
+		int x=7;
+		int y=5;
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		super.tearDown();
+		System.out.println("Clear method");
+		int x=0;
+		int y=0;
+	}
+
+	@Test
+	public void testAdd() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMultiply() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSubtract() {
+		fail("Not yet implemented");
+	}
+
+}

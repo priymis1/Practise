@@ -1,0 +1,14 @@
+package comm.handsOn;
+class Ccc {
+ 
+	public void start()
+	{ 
+		System.out.println("TestA"); 
+		}
+
+
+     
+ public static void main(String[] args) {
+ ((Ccc)new Ccc1()).start();
+ }
+ }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestComputeClass" project="26_08_2019_unit_testing_demo" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="comm.example.TestComputeClass" time="0.0">
+    <testcase name="testAdd" classname="comm.example.TestComputeClass" time="0.0"/>
+    <testcase name="testSubtract" classname="comm.example.TestComputeClass" time="0.0"/>
+    <testcase name="testMultiply" classname="comm.example.TestComputeClass" time="0.0"/>
+  </testsuite>
+</testrun>

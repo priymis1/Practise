@@ -1,0 +1,24 @@
+package comm.example;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
+public class TestCalculator extends TestCase{
+
+	@Test
+	public void testAddMethod() {
+		int x=10;
+		int y=20;
+		Calculator c = new Calculator(x,y);
+		int result = c.addMethod();
+		assertEquals(30,result);
+		fail("Not yet implemented");
+	}
+
+	public static void main(String[] args)
+	{
+		TestRunner.run(TestCalculator.class);
+	}
+}

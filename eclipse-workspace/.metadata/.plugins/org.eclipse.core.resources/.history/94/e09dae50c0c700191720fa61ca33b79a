@@ -1,0 +1,12 @@
+package comm.example;
+
+import junit.framework.TestCase;
+
+public class TestMyClass extends TestCase{
+
+	
+	public void testNullCheck() {
+		//fail("Not yet implemented");
+	}
+
+}

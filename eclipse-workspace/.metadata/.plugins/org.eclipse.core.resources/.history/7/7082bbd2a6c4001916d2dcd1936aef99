@@ -1,0 +1,10 @@
+package fileToDatabase;
+
+import java.io.BufferedReader;
+
+public class FileReader {
+	BufferedReader reader;
+	
+	reader = new BufferedReader
+
+}

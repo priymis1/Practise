@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Employee implements Comparable<Object>{
 	
+	private static int count =0;
 	private int id;
 	private String name;
 	private String department;
@@ -20,7 +21,7 @@ public class Employee implements Comparable<Object>{
 	
 	public Employee(int id, String name, String department, Date dateOfJoining, int age, int salary) {
 		super();
-		this.id = id;
+		this.id = ++count;
 		this.name = name;
 		this.department = department;
 		this.dateOfJoining = dateOfJoining;

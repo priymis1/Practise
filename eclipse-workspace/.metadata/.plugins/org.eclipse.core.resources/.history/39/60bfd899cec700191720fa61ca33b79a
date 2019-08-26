@@ -1,0 +1,134 @@
+package comm.example;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.InetAddress;
+import java.net.MulticastSocket;
+import java.awt.event.ActionEvent;
+
+public class MulticastChatServerUi extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MulticastChatServerUi frame = new MulticastChatServerUi();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MulticastChatServerUi() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblClickstartTo = new JLabel("Click \"START\" to start chatbot server");
+		lblClickstartTo.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblClickstartTo.setForeground(new Color(0, 0, 0));
+		lblClickstartTo.setBounds(10, 11, 218, 14);
+		contentPane.add(lblClickstartTo);
+		
+		JButton btnStart = new JButton("START");
+		btnStart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int portnumber = 1236;
+
+			      
+		        // Create a MulticastSocket
+
+		        MulticastSocket serverMulticastSocket;
+				try {
+					
+					serverMulticastSocket = new MulticastSocket(portnumber);
+			        
+					//System.out.println("MulticastSocket is created...");
+					 textField.setText("Multicast Socket is created");
+					 
+					 // Determine the IP address of a host, given the host name
+
+				        InetAddress group = InetAddress.getByName("225.0.0.1");
+
+				        
+
+				        // getByName- returns IP address of given host
+
+				        serverMulticastSocket.joinGroup(group);
+
+				        System.out.println("joinGroup method is called...");
+
+				        boolean infinite = true;
+				        
+				        // Continually receives data and prints them 
+
+				        while(infinite) {
+
+				            byte buf[] = new byte[1024];
+
+				            DatagramPacket data = new DatagramPacket(buf, buf.length);
+
+				            serverMulticastSocket.receive(data);
+
+				            String msg = new String(data.getData()).trim();
+
+				            System.out.println("Message received from client = " + msg);
+
+				        }
+
+				        serverMulticastSocket.close();
+				        
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+
+	
+		       
+
+		        
+
+		       
+
+		        
+
+		       
+			}
+		});
+		btnStart.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnStart.setBounds(164, 36, 89, 23);
+		contentPane.add(btnStart);
+		
+		textField = new JTextField();
+		textField.setBounds(40, 77, 348, 23);
+		contentPane.add(textField);
+		textField.setColumns(10);
+	}
+}
