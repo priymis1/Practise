@@ -7,4 +7,9 @@ public class BaseballCoach implements Coach {
 		return "practise back volley";
 	}
 
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

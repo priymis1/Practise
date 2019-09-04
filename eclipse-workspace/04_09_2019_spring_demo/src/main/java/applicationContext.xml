@@ -6,6 +6,39 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-<bean name="theCoach" class="com.mycompany._09_2019_spring_demo.bean.BaseballCoach" ></bean>
+<!-- (for 1) <bean name="theCoach" class="com.mycompany._09_2019_spring_demo.bean.BaseballCoach" ></bean> -->
 
+
+<!-- (for 2)
+<bean name="theEmployee" class="com.mycompany._09_2019_spring_demo.bean.Employee" >
+
+<constructor-arg name="id" value = "10"></constructor-arg>
+<constructor-arg name="firstName" value = "priyanshu"></constructor-arg>
+<constructor-arg name="lastName" value = "mishra"></constructor-arg>
+<constructor-arg name="email" value = "iam123@gmail.com"></constructor-arg>
+
+-->
+
+<!--  
+<property name="id" value = "10"/>
+<property name="firstName" value = "priyanshu"/>
+<property name="lastName" value = "mishra"/>
+<property name="email" value = "iam123@gmail.com"/>
+-->
+
+
+<!-- (for 3) -->
+
+
+
+
+	<bean name="luckyService"
+		class="com.mycompany._09_2019_spring_demo.bean.FortuneServiceImpl">
+	</bean>
+	
+	
+	<bean name="theCoach" class="com.mycompany._09_2019_spring_demo.bean.CricketCoach">
+	
+	<constructor-arg name="fortuneService" ref="luckyService"></constructor-arg>
+	</bean>
 </beans>
