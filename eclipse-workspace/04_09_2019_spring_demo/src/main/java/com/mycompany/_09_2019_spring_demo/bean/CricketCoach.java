@@ -68,5 +68,15 @@ public class CricketCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getDailyFortuneService();
 	}
+	
+	public void getCoachName()
+	{
+		System.out.println("coach--> Ravi Shastry");
+	}
+	
+	public void getContractRemoved()
+	{
+		System.out.println("no such coach available!. contract over");
+	}
 
 }

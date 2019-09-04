@@ -26,6 +26,9 @@ public class App
 			//3 updated coach class  
 			Coach theCoach=context.getBean("theCoach",Coach.class);
         	System.out.println(theCoach.getDailyWorkout()+" "+theCoach.getDailyFortune());
+        	
+        	//calls pre destroy method 
+        	context.close();
     		
 		} catch (Exception e) {
 			// TODO: handle exception
