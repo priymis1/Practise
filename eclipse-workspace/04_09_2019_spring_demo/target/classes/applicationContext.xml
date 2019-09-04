@@ -27,7 +27,7 @@
 -->
 
 
-<!-- (for 3) -->
+<!-- (for 3) 
 
 
 
@@ -40,5 +40,20 @@
 	<bean name="theCoach" class="com.mycompany._09_2019_spring_demo.bean.CricketCoach">
 	
 	<constructor-arg name="fortuneService" ref="luckyService"></constructor-arg>
+	</bean>
+	-->
+	
+	<!-- (for 4) -->
+	
+	<context:property-placeholder location="classpath:sport.properties"/>
+	<bean name="luckyService" class="com.mycompany._09_2019_spring_demo.bean.FortuneServiceImpl">
+	</bean>
+	
+	
+	<bean name="theCoach" class="com.mycompany._09_2019_spring_demo.bean.CricketCoach">
+	
+	<property name="fortuneService" ref="luckyService"/>
+	<property name="email" value="${foo.email}"/>
+	<property name="teamName" value="${foo.team}"/>
 	</bean>
 </beans>
