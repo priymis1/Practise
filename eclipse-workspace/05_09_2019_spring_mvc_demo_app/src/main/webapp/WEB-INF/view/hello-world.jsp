@@ -4,13 +4,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>student data</title>
 </head>
 <body>
 
-//Hello welcome to spring mvc!!!!
-<h2>Spring MVC Demo - Home Page</h2>
-<a href="showView">Hello world form </a>
+Student data... <br/>
+<hr>
+<br/>
+Student Name : ${param.studentName}
+Email : ${param.email}
+
+<br/>
+</br>
+<%= request.getAttribute("objectForm").toString()%>
+
+
 
 </body>
 </html>
