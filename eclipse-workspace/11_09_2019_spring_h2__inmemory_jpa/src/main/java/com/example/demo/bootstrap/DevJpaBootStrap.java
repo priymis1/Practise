@@ -6,9 +6,11 @@ import org.springframework.stereotype.Component;
 
 import com.example.demo.model.Author;
 import com.example.demo.model.Book;
+import com.example.demo.model.Employee;
 import com.example.demo.model.Publisher;
 import com.example.demo.repository.AuthorRepository;
 import com.example.demo.repository.BookRepository;
+import com.example.demo.repository.EmployeeRepository;
 import com.example.demo.repository.PublisherRepository;
 
 @Component
@@ -17,13 +19,17 @@ public class DevJpaBootStrap implements ApplicationListener<ContextRefreshedEven
 	private BookRepository bookRepository;
 	private PublisherRepository publisherRepository;
 	private AuthorRepository authorRepository;
+	private EmployeeRepository employeeRepository;
+
+	
 
 	public DevJpaBootStrap(BookRepository bookRepository, PublisherRepository publisherRepository,
-			AuthorRepository authorRepository) {
+			AuthorRepository authorRepository, EmployeeRepository employeeRepository) {
 		super();
 		this.bookRepository = bookRepository;
 		this.publisherRepository = publisherRepository;
 		this.authorRepository = authorRepository;
+		this.employeeRepository = employeeRepository;
 	}
 
 	@Override
@@ -38,6 +44,8 @@ public class DevJpaBootStrap implements ApplicationListener<ContextRefreshedEven
 		publisher.setName("foo");
 		publisher.setAddress("12th Street, LA");
 		publisherRepository.save(publisher);
+		
+		Employee theEmployee=new Employee("Sachin", "Tendulkar", "sachin@luv2code.com");
 
 		// Eric
 		Author eric = new Author("Eric", "Evans");
@@ -56,6 +64,7 @@ public class DevJpaBootStrap implements ApplicationListener<ContextRefreshedEven
 
 		authorRepository.save(rod);
 		bookRepository.save(noEJB);
+		employeeRepository.save(theEmployee);
 
 	}
 
